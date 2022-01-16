@@ -1,3 +1,5 @@
+# Hexlet Level 1 Project
+
 ### Tests and linter status:
 [![Actions Status](https://github.com/DemX86/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/DemX86/frontend-project-lvl1/actions)
 [![Node.js CI](https://github.com/DemX86/frontend-project-lvl1/actions/workflows/node.js.yml/badge.svg)](https://github.com/DemX86/frontend-project-lvl1/actions/workflows/node.js.yml)
