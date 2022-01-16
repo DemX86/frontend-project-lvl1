@@ -10,7 +10,7 @@ const runGame = (name, subject, questions, answers) => {
     if (input === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${input}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      console.log(`"${input}" is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
