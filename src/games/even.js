@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import ROUNDS from '../const.js';
 
 const isEven = (n) => n % 2 === 0;
@@ -8,7 +8,7 @@ const generateTasks = () => {
   const answers = [];
 
   for (let i = 0; i < ROUNDS; i += 1) {
-    const number = getRandomNumber();
+    const number = getRandomInt();
     const answer = isEven(number) ? 'yes' : 'no';
 
     questions.push(`${number}`);

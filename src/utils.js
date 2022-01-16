@@ -1,5 +1,9 @@
-const getRandomNumber = (max = 100) => Math.floor(Math.random() * max);
+const getRandomInt = (min = 0, max = 100) => {
+  const mn = Math.ceil(min);
+  const mx = Math.floor(max);
+  return Math.floor(Math.random() * (mx - mn) + mn);
+};
 
-const getRandomArrayItem = (items) => items[getRandomNumber(items.length)];
+const getRandomArrayItem = (items) => items[getRandomInt(items.length)];
 
-export { getRandomNumber, getRandomArrayItem };
+export { getRandomInt, getRandomArrayItem };

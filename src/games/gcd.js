@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import ROUNDS from '../const.js';
 
 const getDivisors = (n) => {
@@ -43,8 +43,8 @@ const generateTasks = () => {
   const answers = [];
 
   for (let i = 0; i < ROUNDS; i += 1) {
-    const a = getRandomNumber();
-    const b = getRandomNumber();
+    const a = getRandomInt();
+    const b = getRandomInt();
 
     questions.push(`${a} ${b}`);
     answers.push(`${getGCD(a, b)}`);
