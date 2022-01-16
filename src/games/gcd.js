@@ -43,8 +43,8 @@ const generateTasks = () => {
   const answers = [];
 
   for (let i = 0; i < ROUNDS; i += 1) {
-    const a = getRandomInt();
-    const b = getRandomInt();
+    const a = getRandomInt(1, 100);
+    const b = getRandomInt(1, 100);
 
     questions.push(`${a} ${b}`);
     answers.push(`${getGCD(a, b)}`);
