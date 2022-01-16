@@ -23,7 +23,7 @@ const getGCD = (a, b) => {
   while (i < divisorsA.length && j < divisorsB.length) {
     const divA = divisorsA[i];
     const divB = divisorsB[j];
-    if (divA === divB && divA !== common.at(-1)) {
+    if (divA === divB && divA !== common[common.length - 1]) {
       common.push(divA);
       i += 1;
       j += 1;
