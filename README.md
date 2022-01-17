@@ -6,11 +6,11 @@
 
 ## About
 Here we have five games to practice your brain:
-* Calc — train your arithmetic skills with add, subtract and multiply operations
-* Even — guess if the number is even or odd
-* GCD — find Greatest Common Divisor of two numbers
-* Prime — guess if the number is prime or not
-* Progression — figure out missed item of the arithmetic progression
+* _Calc_ — train your arithmetic skills with add, subtract and multiply operations
+* _Even_ — guess if the number is even or odd
+* _GCD_ — find Greatest Common Divisor of two numbers
+* _Prime_ — guess if the number is prime or not
+* _Progression_ — figure out missed item of the arithmetic progression
 
 ## Installation
 Clone the repo and run:
