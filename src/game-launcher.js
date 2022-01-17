@@ -15,10 +15,10 @@ const assets = {
   progression: [subjectProgression, generateTaskProgression],
 };
 
-const launchGame = (game) => {
-  const name = welcome();
-  const [subject, generateTask] = assets[game];
-  runGame(name, subject, generateTask);
+const launchGame = (gameName) => {
+  const username = welcome();
+  const [subject, generateTask] = assets[gameName];
+  runGame(username, subject, generateTask);
 };
 
 export default launchGame;
