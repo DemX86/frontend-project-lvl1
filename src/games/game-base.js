@@ -1,9 +1,9 @@
 import readline from 'readline-sync';
-import ROUNDS from '../const.js';
+import ROUNDS_COUNT from '../const.js';
 
 const runGame = (name, subject, questions, answers) => {
   console.log(`${subject}`);
-  for (let i = 0; i < ROUNDS; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     console.log(`Question: ${questions[i]}`);
     const input = readline.question('Your answer: ');
     const answer = answers[i];

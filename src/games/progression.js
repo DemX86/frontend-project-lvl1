@@ -1,5 +1,5 @@
 import { getRandomInt } from '../utils.js';
-import ROUNDS from '../const.js';
+import ROUNDS_COUNT from '../const.js';
 
 const generateProgression = (start, length, diff) => {
   const progression = [];
@@ -13,7 +13,7 @@ const generateTasks = () => {
   const questions = [];
   const answers = [];
 
-  for (let i = 0; i < ROUNDS; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     // создаём арифметическую прогрессию
     const start = getRandomInt();
     const length = getRandomInt(5, 10);

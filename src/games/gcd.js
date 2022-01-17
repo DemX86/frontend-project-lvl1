@@ -1,5 +1,5 @@
 import { getRandomInt } from '../utils.js';
-import ROUNDS from '../const.js';
+import ROUNDS_COUNT from '../const.js';
 
 const getDivisors = (n) => {
   const divisors = [1];
@@ -42,7 +42,7 @@ const generateTasks = () => {
   const questions = [];
   const answers = [];
 
-  for (let i = 0; i < ROUNDS; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const a = getRandomInt(1, 100);
     const b = getRandomInt(1, 100);
 

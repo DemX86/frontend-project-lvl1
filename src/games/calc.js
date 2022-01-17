@@ -1,5 +1,5 @@
 import { getRandomInt, getRandomArrayItem } from '../utils.js';
-import ROUNDS from '../const.js';
+import ROUNDS_COUNT from '../const.js';
 
 const OPERATIONS = ['+', '-', '*'];
 
@@ -7,7 +7,7 @@ const generateTasks = () => {
   const questions = [];
   const answers = [];
 
-  for (let i = 0; i < ROUNDS; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const a = getRandomInt();
     const b = getRandomInt();
     const operator = getRandomArrayItem(OPERATIONS);

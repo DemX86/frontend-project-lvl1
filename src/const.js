@@ -1,3 +1,3 @@
-const ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
-export default ROUNDS;
+export default ROUNDS_COUNT;
