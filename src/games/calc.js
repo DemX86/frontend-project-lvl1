@@ -1,36 +1,29 @@
 import { getRandomInt, getRandomArrayItem } from '../utils.js';
-import ROUNDS_COUNT from '../const.js';
+
+const subjectCalc = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
-const generateTasks = () => {
-  const questions = [];
-  const answers = [];
+const generateTaskCalc = () => {
+  const a = getRandomInt();
+  const b = getRandomInt();
+  const operator = getRandomArrayItem(OPERATIONS);
 
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const a = getRandomInt();
-    const b = getRandomInt();
-    const operator = getRandomArrayItem(OPERATIONS);
-
-    let answer;
-    switch (operator) {
-      case '+':
-        answer = a + b;
-        break;
-      case '-':
-        answer = a - b;
-        break;
-      case '*':
-        answer = a * b;
-        break;
-      // no default
-    }
-
-    questions.push(`${a} ${operator} ${b}`);
-    answers.push(`${answer}`);
+  let answer;
+  switch (operator) {
+    case '+':
+      answer = a + b;
+      break;
+    case '-':
+      answer = a - b;
+      break;
+    case '*':
+      answer = a * b;
+      break;
+    // no default
   }
 
-  return [questions, answers];
+  return [`${a} ${operator} ${b}`, `${answer}`];
 };
 
-export default generateTasks;
+export { subjectCalc, generateTaskCalc };

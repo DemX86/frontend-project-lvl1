@@ -1,12 +1,12 @@
 import readline from 'readline-sync';
-import ROUNDS_COUNT from '../const.js';
+import ROUNDS_COUNT from './const.js';
 
-const runGame = (name, subject, questions, answers) => {
+const runGame = (name, subject, generateTask) => {
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    console.log(`Question: ${questions[i]}`);
+    const [question, answer] = generateTask();
+    console.log(`Question: ${question}`);
     const input = readline.question('Your answer: ');
-    const answer = answers[i];
     if (input === answer) {
       console.log('Correct!');
     } else {

@@ -1,5 +1,6 @@
 import { getRandomInt } from '../utils.js';
-import ROUNDS_COUNT from '../const.js';
+
+const subjectGCD = 'Find the greatest common divisor of given numbers.';
 
 const getDivisors = (n) => {
   const divisors = [1];
@@ -16,7 +17,7 @@ const getGCD = (a, b) => {
   const divisorsA = getDivisors(a);
   const divisorsB = getDivisors(b);
 
-  // ищем общие делители
+  // ищем общие
   const common = [];
   let i = 0;
   let j = 0;
@@ -38,19 +39,10 @@ const getGCD = (a, b) => {
   return Math.max(...common);
 };
 
-const generateTasks = () => {
-  const questions = [];
-  const answers = [];
-
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const a = getRandomInt(1, 100);
-    const b = getRandomInt(1, 100);
-
-    questions.push(`${a} ${b}`);
-    answers.push(`${getGCD(a, b)}`);
-  }
-
-  return [questions, answers];
+const generateTaskGCD = () => {
+  const a = getRandomInt(1, 100);
+  const b = getRandomInt(1, 100);
+  return [`${a} ${b}`, `${getGCD(a, b)}`];
 };
 
-export default generateTasks;
+export { subjectGCD, generateTaskGCD };

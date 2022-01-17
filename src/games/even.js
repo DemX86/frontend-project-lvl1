@@ -1,21 +1,13 @@
 import { getRandomInt } from '../utils.js';
-import ROUNDS_COUNT from '../const.js';
+
+const subjectEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (n) => n % 2 === 0;
 
-const generateTasks = () => {
-  const questions = [];
-  const answers = [];
-
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const number = getRandomInt();
-    const answer = isEven(number) ? 'yes' : 'no';
-
-    questions.push(`${number}`);
-    answers.push(`${answer}`);
-  }
-
-  return [questions, answers];
+const generateTaskEven = () => {
+  const number = getRandomInt();
+  const answer = isEven(number) ? 'yes' : 'no';
+  return [`${number}`, `${answer}`];
 };
 
-export default generateTasks;
+export { subjectEven, generateTaskEven };

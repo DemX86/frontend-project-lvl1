@@ -1,5 +1,6 @@
 import { getRandomInt } from '../utils.js';
-import ROUNDS_COUNT from '../const.js';
+
+const subjectProgression = 'What number is missing in the progression?';
 
 const generateProgression = (start, length, diff) => {
   const progression = [];
@@ -9,27 +10,19 @@ const generateProgression = (start, length, diff) => {
   return progression;
 };
 
-const generateTasks = () => {
-  const questions = [];
-  const answers = [];
+const generateTaskProgression = () => {
+  // создаём арифметическую прогрессию
+  const start = getRandomInt();
+  const length = getRandomInt(5, 10);
+  const diff = getRandomInt(1, 10);
+  const progression = generateProgression(start, length, diff);
 
-  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    // создаём арифметическую прогрессию
-    const start = getRandomInt();
-    const length = getRandomInt(5, 10);
-    const diff = getRandomInt(1, 10);
-    const progression = generateProgression(start, length, diff);
+  // выбираем элемент для скрытия
+  const hiddenIndex = getRandomInt(0, length - 1);
+  const answer = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
 
-    // выбираем элемент для скрытия
-    const hiddenIndex = getRandomInt(0, length - 1);
-    const answer = progression[hiddenIndex];
-    progression[hiddenIndex] = '..';
-
-    questions.push(progression.join(' '));
-    answers.push(`${answer}`);
-  }
-
-  return [questions, answers];
+  return [progression.join(' '), `${answer}`];
 };
 
-export default generateTasks;
+export { subjectProgression, generateTaskProgression };
