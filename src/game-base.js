@@ -3,7 +3,7 @@ import welcome from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
-const runGame = (subject, generateRound) => {
+const runGameEngine = (subject, generateRound) => {
   const username = welcome();
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
@@ -21,4 +21,4 @@ const runGame = (subject, generateRound) => {
   console.log(`Congratulations, ${username}!`);
 };
 
-export default runGame;
+export default runGameEngine;

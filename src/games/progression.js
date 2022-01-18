@@ -1,4 +1,5 @@
 import getRandomInt from '../utils.js';
+import runGameEngine from '../game-base.js';
 
 const subject = 'What number is missing in the progression?';
 
@@ -23,4 +24,8 @@ const generateRound = () => {
   return [progression.join(' '), `${answer}`];
 };
 
-export { subject, generateRound };
+const runGame = () => {
+  runGameEngine(subject, generateRound);
+};
+
+export default runGame;

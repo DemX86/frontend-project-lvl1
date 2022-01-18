@@ -1,4 +1,5 @@
 import getRandomInt from '../utils.js';
+import runGameEngine from '../game-base.js';
 
 const subject = 'Find the greatest common divisor of given numbers.';
 
@@ -42,4 +43,8 @@ const generateRound = () => {
   return [`${a} ${b}`, `${getGCD(a, b)}`];
 };
 
-export { subject, generateRound };
+const runGame = () => {
+  runGameEngine(subject, generateRound);
+};
+
+export default runGame;

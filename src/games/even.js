@@ -1,4 +1,5 @@
 import getRandomInt from '../utils.js';
+import runGameEngine from '../game-base.js';
 
 const subject = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -10,4 +11,8 @@ const generateRound = () => {
   return [`${number}`, `${answer}`];
 };
 
-export { subject, generateRound };
+const runGame = () => {
+  runGameEngine(subject, generateRound);
+};
+
+export default runGame;

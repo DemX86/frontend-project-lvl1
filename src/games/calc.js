@@ -1,4 +1,5 @@
 import getRandomInt from '../utils.js';
+import runGameEngine from '../game-base.js';
 
 const subject = 'What is the result of the expression?';
 
@@ -28,4 +29,8 @@ const generateRound = () => {
   return [`${a} ${operator} ${b}`, `${answer}`];
 };
 
-export { subject, generateRound };
+const runGame = () => {
+  runGameEngine(subject, generateRound);
+};
+
+export default runGame;
