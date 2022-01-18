@@ -1,8 +1,10 @@
-import { getRandomInt, getRandomArrayItem } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const subjectCalc = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
+
+const getRandomArrayItem = (items) => items[Math.floor(Math.random() * items.length)];
 
 const generateTaskCalc = () => {
   const a = getRandomInt();
