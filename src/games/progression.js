@@ -1,4 +1,4 @@
-import { getRandomInt } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const subjectProgression = 'What number is missing in the progression?';
 
