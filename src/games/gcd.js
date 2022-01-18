@@ -13,11 +13,9 @@ const getDivisors = (n) => {
 };
 
 const getGCD = (a, b) => {
-  // находим делители чисел
   const divisorsA = getDivisors(a);
   const divisorsB = getDivisors(b);
 
-  // ищем общие
   const common = [];
   let i = 0;
   let j = 0;
@@ -35,7 +33,6 @@ const getGCD = (a, b) => {
     }
   }
 
-  // выбираем максимальный
   return Math.max(...common);
 };
 

@@ -11,13 +11,11 @@ const generateProgression = (start, length, diff) => {
 };
 
 const generateTaskProgression = () => {
-  // создаём арифметическую прогрессию
   const start = getRandomInt();
   const length = getRandomInt(5, 10);
   const diff = getRandomInt(1, 10);
   const progression = generateProgression(start, length, diff);
 
-  // выбираем элемент для скрытия
   const hiddenIndex = getRandomInt(0, length - 1);
   const answer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
