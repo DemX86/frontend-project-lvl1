@@ -3,11 +3,11 @@ import welcome from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
-const runGame = (subject, generateTask) => {
+const runGame = (subject, generateRound) => {
   const username = welcome();
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [question, answer] = generateTask();
+    const [question, answer] = generateRound();
     console.log(`Question: ${question}`);
     const input = readline.question('Your answer: ');
     if (input === answer) {

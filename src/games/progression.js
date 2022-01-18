@@ -10,7 +10,7 @@ const generateProgression = (start, length, diff) => {
   return progression;
 };
 
-const generateTask = () => {
+const generateRound = () => {
   const start = getRandomInt();
   const length = getRandomInt(5, 10);
   const diff = getRandomInt(1, 10);
@@ -23,4 +23,4 @@ const generateTask = () => {
   return [progression.join(' '), `${answer}`];
 };
 
-export { subject, generateTask };
+export { subject, generateRound };

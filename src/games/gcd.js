@@ -36,10 +36,10 @@ const getGCD = (a, b) => {
   return Math.max(...common);
 };
 
-const generateTask = () => {
+const generateRound = () => {
   const a = getRandomInt(1, 100);
   const b = getRandomInt(1, 100);
   return [`${a} ${b}`, `${getGCD(a, b)}`];
 };
 
-export { subject, generateTask };
+export { subject, generateRound };
