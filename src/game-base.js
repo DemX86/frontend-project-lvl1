@@ -1,5 +1,6 @@
 import readline from 'readline-sync';
-import ROUNDS_COUNT from './const.js';
+
+const ROUNDS_COUNT = 3;
 
 const runGame = (username, subject, generateTask) => {
   console.log(`${subject}`);
