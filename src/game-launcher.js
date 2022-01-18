@@ -1,5 +1,4 @@
 import runGame from './game-base.js';
-import welcome from './cli.js';
 
 import { subjectCalc, generateTaskCalc } from './games/calc.js';
 import { subjectEven, generateTaskEven } from './games/even.js';
@@ -16,9 +15,8 @@ const assets = {
 };
 
 const launchGame = (gameName) => {
-  const username = welcome();
   const [subject, generateTask] = assets[gameName];
-  runGame(username, subject, generateTask);
+  runGame(subject, generateTask);
 };
 
 export default launchGame;

@@ -1,8 +1,10 @@
 import readline from 'readline-sync';
+import welcome from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
-const runGame = (username, subject, generateTask) => {
+const runGame = (subject, generateTask) => {
+  const username = welcome();
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, answer] = generateTask();
