@@ -6,7 +6,7 @@ const OPERATIONS = ['+', '-', '*'];
 
 const getRandomArrayItem = (items) => items[Math.floor(Math.random() * items.length)];
 
-const generateTask = () => {
+const generateRound = () => {
   const a = getRandomInt();
   const b = getRandomInt();
   const operator = getRandomArrayItem(OPERATIONS);
@@ -28,4 +28,4 @@ const generateTask = () => {
   return [`${a} ${operator} ${b}`, `${answer}`];
 };
 
-export { subject, generateTask };
+export { subject, generateRound };

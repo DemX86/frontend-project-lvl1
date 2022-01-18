@@ -14,10 +14,10 @@ const isPrime = (n) => {
   return true;
 };
 
-const generateTask = () => {
+const generateRound = () => {
   const number = getRandomInt(1, 100);
   const answer = isPrime(number) ? 'yes' : 'no';
   return [`${number}`, `${answer}`];
 };
 
-export { subject, generateTask };
+export { subject, generateRound };
