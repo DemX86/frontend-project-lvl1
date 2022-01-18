@@ -1,6 +1,6 @@
 import getRandomInt from '../utils.js';
 
-const subjectProgression = 'What number is missing in the progression?';
+const subject = 'What number is missing in the progression?';
 
 const generateProgression = (start, length, diff) => {
   const progression = [];
@@ -10,7 +10,7 @@ const generateProgression = (start, length, diff) => {
   return progression;
 };
 
-const generateTaskProgression = () => {
+const generateTask = () => {
   const start = getRandomInt();
   const length = getRandomInt(5, 10);
   const diff = getRandomInt(1, 10);
@@ -23,4 +23,4 @@ const generateTaskProgression = () => {
   return [progression.join(' '), `${answer}`];
 };
 
-export { subjectProgression, generateTaskProgression };
+export { subject, generateTask };

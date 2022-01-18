@@ -1,6 +1,6 @@
 import getRandomInt from '../utils.js';
 
-const subjectPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const subject = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -14,10 +14,10 @@ const isPrime = (n) => {
   return true;
 };
 
-const generateTaskPrime = () => {
+const generateTask = () => {
   const number = getRandomInt(1, 100);
   const answer = isPrime(number) ? 'yes' : 'no';
   return [`${number}`, `${answer}`];
 };
 
-export { subjectPrime, generateTaskPrime };
+export { subject, generateTask };

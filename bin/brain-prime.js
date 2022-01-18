@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import launchGame from '../src/game-launcher.js';
+import { subject, generateTask } from '../src/games/prime.js';
+import runGame from '../src/game-base.js';
 
-launchGame('prime');
+runGame(subject, generateTask);

@@ -1,6 +1,6 @@
 import getRandomInt from '../utils.js';
 
-const subjectGCD = 'Find the greatest common divisor of given numbers.';
+const subject = 'Find the greatest common divisor of given numbers.';
 
 const getDivisors = (n) => {
   const divisors = [1];
@@ -36,10 +36,10 @@ const getGCD = (a, b) => {
   return Math.max(...common);
 };
 
-const generateTaskGCD = () => {
+const generateTask = () => {
   const a = getRandomInt(1, 100);
   const b = getRandomInt(1, 100);
   return [`${a} ${b}`, `${getGCD(a, b)}`];
 };
 
-export { subjectGCD, generateTaskGCD };
+export { subject, generateTask };

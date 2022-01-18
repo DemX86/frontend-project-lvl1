@@ -1,12 +1,12 @@
 import getRandomInt from '../utils.js';
 
-const subjectCalc = 'What is the result of the expression?';
+const subject = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
 const getRandomArrayItem = (items) => items[Math.floor(Math.random() * items.length)];
 
-const generateTaskCalc = () => {
+const generateTask = () => {
   const a = getRandomInt();
   const b = getRandomInt();
   const operator = getRandomArrayItem(OPERATIONS);
@@ -28,4 +28,4 @@ const generateTaskCalc = () => {
   return [`${a} ${operator} ${b}`, `${answer}`];
 };
 
-export { subjectCalc, generateTaskCalc };
+export { subject, generateTask };

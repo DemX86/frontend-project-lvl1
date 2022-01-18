@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import launchGame from '../src/game-launcher.js';
+import { subject, generateTask } from '../src/games/even.js';
+import runGame from '../src/game-base.js';
 
-launchGame('even');
+runGame(subject, generateTask);
