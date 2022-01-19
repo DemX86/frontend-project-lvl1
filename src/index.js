@@ -8,7 +8,7 @@ const runGameEngine = (rule, generateRound) => {
   const username = askUsername();
   greetUser(username);
 
-  console.log(`${rule}`);
+  console.log(rule);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, answerCorrect] = generateRound();
     console.log(`Question: ${question}`);

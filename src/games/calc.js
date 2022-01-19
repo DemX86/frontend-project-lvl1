@@ -26,7 +26,7 @@ const generateRound = () => {
     // no default
   }
 
-  return [`${a} ${operator} ${b}`, `${answer}`];
+  return [`${a} ${operator} ${b}`, String(answer)];
 };
 
 const runGame = () => {

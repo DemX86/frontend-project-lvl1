@@ -13,7 +13,7 @@ const getGCD = (a, b) => {
 const generateRound = () => {
   const a = genRandomInt(1, 100);
   const b = genRandomInt(1, 100);
-  return [`${a} ${b}`, `${getGCD(a, b)}`];
+  return [`${a} ${b}`, String(getGCD(a, b))];
 };
 
 const runGame = () => {

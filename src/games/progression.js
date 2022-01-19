@@ -21,7 +21,7 @@ const generateRound = () => {
   const answer = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
 
-  return [progression.join(' '), `${answer}`];
+  return [progression.join(' '), String(answer)];
 };
 
 const runGame = () => {
