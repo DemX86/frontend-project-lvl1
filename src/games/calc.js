@@ -5,12 +5,12 @@ const rule = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
-const getRandomArrayItem = (items) => items[Math.floor(Math.random() * items.length)];
+const getRandomListItem = (items) => items[Math.floor(Math.random() * items.length)];
 
 const generateRound = () => {
   const a = getRandomInt();
   const b = getRandomInt();
-  const operator = getRandomArrayItem(OPERATIONS);
+  const operator = getRandomListItem(OPERATIONS);
 
   let answer;
   switch (operator) {
