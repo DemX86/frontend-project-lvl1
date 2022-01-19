@@ -1,4 +1,4 @@
-import genRandomInt from '../utils.js';
+import genRandomNum from '../utils.js';
 import runGameEngine from '../game-engine.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -16,7 +16,7 @@ const isPrime = (n) => {
 };
 
 const generateRound = () => {
-  const number = genRandomInt(1, 100);
+  const number = genRandomNum(1, 100);
   const answer = isPrime(number) ? 'yes' : 'no';
   return [String(number), String(answer)];
 };

@@ -1,4 +1,4 @@
-import genRandomInt from '../utils.js';
+import genRandomNum from '../utils.js';
 import runGameEngine from '../game-engine.js';
 
 const rule = 'What is the result of the expression?';
@@ -8,8 +8,8 @@ const OPERATIONS = ['+', '-', '*'];
 const getRandomListItem = (items) => items[Math.floor(Math.random() * items.length)];
 
 const generateRound = () => {
-  const a = genRandomInt();
-  const b = genRandomInt();
+  const a = genRandomNum();
+  const b = genRandomNum();
   const operator = getRandomListItem(OPERATIONS);
 
   let answer;

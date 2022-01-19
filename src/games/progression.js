@@ -1,4 +1,4 @@
-import genRandomInt from '../utils.js';
+import genRandomNum from '../utils.js';
 import runGameEngine from '../game-engine.js';
 
 const rule = 'What number is missing in the progression?';
@@ -12,12 +12,12 @@ const generateProgression = (start, length, diff) => {
 };
 
 const generateRound = () => {
-  const start = genRandomInt();
-  const length = genRandomInt(5, 10);
-  const diff = genRandomInt(1, 10);
+  const start = genRandomNum();
+  const length = genRandomNum(5, 10);
+  const diff = genRandomNum(1, 10);
   const progression = generateProgression(start, length, diff);
 
-  const hiddenIndex = genRandomInt(0, length - 1);
+  const hiddenIndex = genRandomNum(0, length - 1);
   const answer = progression[hiddenIndex];
   const part1 = progression.slice(0, hiddenIndex);
   const part2 = progression.slice(hiddenIndex + 1);
