@@ -21,7 +21,7 @@ const generateRound = () => {
   const answer = progression[hiddenIndex];
   const part1 = progression.slice(0, hiddenIndex);
   const part2 = progression.slice(hiddenIndex + 1);
-  const question = `${part1.join(' ')} .. ${part2.join(' ')}`;
+  const question = `${part1.join(' ')} .. ${part2.join(' ')}`.trim();
 
   return [question, String(answer)];
 };
