@@ -3,12 +3,12 @@ import { welcome, askUsername, greetUser } from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
-const runGameEngine = (subject, generateRound) => {
+const runGameEngine = (rule, generateRound) => {
   welcome();
   const username = askUsername();
   greetUser(username);
 
-  console.log(`${subject}`);
+  console.log(`${rule}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, answerCorrect] = generateRound();
     console.log(`Question: ${question}`);

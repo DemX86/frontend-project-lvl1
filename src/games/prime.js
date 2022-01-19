@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import runGameEngine from '../index.js';
 
-const subject = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -22,7 +22,7 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  runGameEngine(subject, generateRound);
+  runGameEngine(rule, generateRound);
 };
 
 export default runGame;

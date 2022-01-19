@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import runGameEngine from '../index.js';
 
-const subject = 'What is the result of the expression?';
+const rule = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
@@ -30,7 +30,7 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  runGameEngine(subject, generateRound);
+  runGameEngine(rule, generateRound);
 };
 
 export default runGame;

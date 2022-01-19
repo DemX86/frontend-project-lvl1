@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import runGameEngine from '../index.js';
 
-const subject = 'Find the greatest common divisor of given numbers.';
+const rule = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (a, b) => {
   if (!b) {
@@ -17,7 +17,7 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  runGameEngine(subject, generateRound);
+  runGameEngine(rule, generateRound);
 };
 
 export default runGame;
