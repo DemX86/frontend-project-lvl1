@@ -1,10 +1,13 @@
 import readline from 'readline-sync';
-import welcome from './cli.js';
+import { welcome, askUsername, greetUser } from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
 const runGameEngine = (subject, generateRound) => {
-  const username = welcome();
+  welcome();
+  const username = askUsername();
+  greetUser(username);
+
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, answer] = generateRound();
