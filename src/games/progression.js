@@ -3,6 +3,8 @@ import runGameEngine from '../game-engine.js';
 
 const rule = 'What number is missing in the progression?';
 
+const PROGRESSION_LENGTH_MIN = 5;
+
 const generateProgression = (start, length, diff) => {
   const progression = [];
   for (let i = 1; i <= length; i += 1) {
@@ -13,7 +15,7 @@ const generateProgression = (start, length, diff) => {
 
 const generateRound = () => {
   const start = genRandomNum();
-  const length = genRandomNum(5, 10);
+  const length = genRandomNum(PROGRESSION_LENGTH_MIN, 10);
   const diff = genRandomNum(1, 10);
   const progression = generateProgression(start, length, diff);
 
