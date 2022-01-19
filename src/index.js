@@ -10,13 +10,13 @@ const runGameEngine = (subject, generateRound) => {
 
   console.log(`${subject}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
-    const [question, answer] = generateRound();
+    const [question, answerCorrect] = generateRound();
     console.log(`Question: ${question}`);
-    const input = readline.question('Your answer: ');
-    if (input === answer) {
+    const answerUser = readline.question('Your answer: ');
+    if (answerUser === answerCorrect) {
       console.log('Correct!');
     } else {
-      console.log(`"${input}" is wrong answer ;(. Correct answer was "${answer}".`);
+      console.log(`"${answerUser}" is wrong answer ;(. Correct answer was "${answerCorrect}".`);
       console.log(`Let's try again, ${username}!`);
       return;
     }
