@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import runGameEngine from '../game-base.js';
+import runGameEngine from '../index.js';
 
 const subject = 'What number is missing in the progression?';
 

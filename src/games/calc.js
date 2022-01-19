@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import runGameEngine from '../game-base.js';
+import runGameEngine from '../index.js';
 
 const subject = 'What is the result of the expression?';
 
