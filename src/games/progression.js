@@ -24,8 +24,6 @@ const generateRound = () => {
   return [progression.join(' '), String(answer)];
 };
 
-const runGame = () => {
+export default () => {
   runGameEngine(rule, generateRound);
 };
-
-export default runGame;

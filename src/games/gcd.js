@@ -16,8 +16,6 @@ const generateRound = () => {
   return [`${a} ${b}`, String(getGCD(a, b))];
 };
 
-const runGame = () => {
+export default () => {
   runGameEngine(rule, generateRound);
 };
-
-export default runGame;

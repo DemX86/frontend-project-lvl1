@@ -29,8 +29,6 @@ const generateRound = () => {
   return [`${a} ${operator} ${b}`, String(answer)];
 };
 
-const runGame = () => {
+export default () => {
   runGameEngine(rule, generateRound);
 };
-
-export default runGame;
