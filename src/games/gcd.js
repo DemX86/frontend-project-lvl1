@@ -3,17 +3,17 @@ import runGameEngine from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (a, b) => {
+const getGcd = (a, b) => {
   if (!b) {
     return a;
   }
-  return getGCD(b, a % b);
+  return getGcd(b, a % b);
 };
 
 const generateRound = () => {
   const a = genRandomInt(1, 100);
   const b = genRandomInt(1, 100);
-  return [`${a} ${b}`, String(getGCD(a, b))];
+  return [`${a} ${b}`, String(getGcd(a, b))];
 };
 
 export default () => {
