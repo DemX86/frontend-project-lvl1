@@ -5,25 +5,26 @@ const rule = 'What number is missing in the progression?';
 
 const PROGRESSION_LENGTH_MIN = 5;
 
-const generateProgression = (start, length, diff) => {
-  const progression = [];
-  for (let i = 1; i <= length; i += 1) {
-    progression.push(start + (i - 1) * diff);
+const generateQuestion = (start, length, diff, hiddenIndex) => {
+  const items = [];
+  for (let i = 0; i < length; i += 1) {
+    if (i === hiddenIndex) {
+      items.push('..');
+    } else {
+      items.push(start + i * diff);
+    }
   }
-  return progression;
+  return items.join(' ');
 };
 
 const generateRound = () => {
   const start = genRandomNum();
   const length = genRandomNum(PROGRESSION_LENGTH_MIN, 10);
   const diff = genRandomNum(1, 10);
-  const progression = generateProgression(start, length, diff);
-
   const hiddenIndex = genRandomNum(0, length - 1);
-  const answer = progression[hiddenIndex];
-  const part1 = progression.slice(0, hiddenIndex);
-  const part2 = progression.slice(hiddenIndex + 1);
-  const question = `${part1.join(' ')} .. ${part2.join(' ')}`.trim();
+
+  const question = generateQuestion(start, length, diff, hiddenIndex);
+  const answer = start + hiddenIndex * diff;
 
   return [question, String(answer)];
 };
