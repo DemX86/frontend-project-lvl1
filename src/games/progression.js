@@ -19,9 +19,11 @@ const generateRound = () => {
 
   const hiddenIndex = genRandomInt(0, length - 1);
   const answer = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
+  const part1 = progression.slice(0, hiddenIndex);
+  const part2 = progression.slice(hiddenIndex + 1);
+  const question = `${part1.join(' ')} .. ${part2.join(' ')}`;
 
-  return [progression.join(' '), String(answer)];
+  return [question, String(answer)];
 };
 
 export default () => {
