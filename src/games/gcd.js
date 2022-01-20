@@ -4,7 +4,7 @@ import runGameEngine from '../game-engine.js';
 const rule = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
-  if (!b) {
+  if (b === 0) {
     return a;
   }
   return getGcd(b, a % b);
